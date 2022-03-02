@@ -8,7 +8,7 @@ select il.impression_id, cl.cpc, count(cl.impression_id) as proklik, sum(conl.va
 from impression_logs il
 join click_logs cl on cl.impression_id = il.impression_id
 join conversion_logs conl on conl.impression_id = il.impression_id
-where il.impression_id = 1
+where il.impression_id = 123
 group by il.impression_id, cl.cpc
 order by cl.cpc desc
 
